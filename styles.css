@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap');
+
+:root {
+  --primaryBlack: #000000;
+  --yellow: #fafd86;
+  --gray: #b1b1b1;
+  --white: #ffffff;
+  --primaryFont: 'Karla', sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primaryBlack);
+  color: var(--white);
+  font-family: var(--primaryFont);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--primaryBlack);
+  background-color: var(--yellow);
+  width: 100vw;
+  position: sticky;
+  top: 0;
+}
+
+nav header {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 100px;
+  padding: 0;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  color: var(--primaryBlack);
+  text-decoration: none;
+}
+
+/* ~ welcome section */
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--primaryBlack);
+  color: var(--white);
+  height: 100vh;
+}
+
+#welcome-section h1 {
+  text-align: center;
+}
+
+#welcome-section span {
+  color: var(--yellow);
+}
+
+/* ~ project tiles */
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 90vw;
+  background-color: var(--primaryBlack);
+  color: var(--white);
+}
+
+.projects-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: var(--primaryBlack);
+  color: var(--white);
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow);
+  border-radius: 10px;
+  color: var(--white);
+}
+
+.project-tile h3 {
+  color: var(--primaryBlack);
+  margin-block-start: 0;
+  margin-block-end: 0.5em;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primaryBlack);
+  background-color: var(--gray);
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 6px 40px;
+  margin: 10px;
+  gap: 10px;
+
+  font-size: 5vw;
+  font-weight: 700;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.project-tile a {
+  text-decoration: none;
+
+}
+
+.link-btn a {}
+
+.link-btn:hover {
+  color: var(--white);
+}
+
+/* ~ gh profile */
+.github-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  height: 70vh;
+}
+
+#profile-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 50vh; */
+  gap: 20px;
+  background-color: var(--primaryBlack);
+  color: var(--white);
+  text-decoration: none;
+}
+
+#profile-link button {
+  color: var(--primaryBlack);
+  background-color: var(--yellow);
+
+  width: 60vw;
+  height: 100px;
+
+  border: none;
+  border-radius: 4px;
+
+  margin: 20px 0 40px 0;
+
+  font-family: var(--primaryFont);
+  font-size: 1.3rem;
+}
+
+/* media queries */
+
+@media screen and (min-width: 20px) {
+  .project-tile h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  .projects-div {
+    width: 100%;
+  }
+
+  .link-btn {
+    font-size: 1.2rem;
+    padding: 6px 20px;
+  }
+
+  .tile-img {
+    width: 100%;
+  }
+
+  .tile-img img {
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  .project-tile {}
+}
+
+@media screen and (min-width: 768px) {
+  #welcome-section h1{
+    font-size: 2.5rem;
+    line-height: 80px;
+  }
+
+  .project-tile {
+    width: 45%;
+    /* height: 310px; */
+  }
+
+  .projects-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: var(--primaryBlack);
+    color: var(--white);
+    flex-wrap: wrap;
+  }
+
+  #projects h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  nav ul li {
+    font-size: 1.5rem;
+  }
+
+}
